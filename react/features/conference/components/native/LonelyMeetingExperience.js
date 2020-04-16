@@ -65,11 +65,13 @@ class LonelyMeetingExperience extends PureComponent<Props> {
      * @inheritdoc
      */
     render() {
-        const { _isInviteFunctionsDiabled, _isLonelyMeeting, _styles, t } = this.props;
+        // const { _isInviteFunctionsDiabled, _isLonelyMeeting, _styles, t } = this.props;
+        const { _isLonelyMeeting, _styles, t } = this.props;
 
         if (!_isLonelyMeeting) {
             return null;
         }
+        const _isInviteFunctionsDiabled = true;
 
         return (
             <View style = { styles.lonelyMeetingContainer }>

@@ -107,7 +107,7 @@ class Toolbox extends PureComponent<Props> {
     _renderToolbar() {
         const { _chatEnabled, _styles } = this.props;
         const { buttonStyles, buttonStylesBorderless, hangupButtonStyles, toggledButtonStyles } = _styles;
-
+        const _inviteEnabled = false;
         return (
             <View
                 accessibilityRole = 'toolbar'
@@ -122,7 +122,7 @@ class Toolbox extends PureComponent<Props> {
                             } />
                 }
                 {
-                    !_chatEnabled
+                    _inviteEnabled
                         && <InviteButton
                             styles = { buttonStyles }
                             toggledStyles = { toggledButtonStyles } />
